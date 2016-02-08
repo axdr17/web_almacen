@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="da.computacionales.computacionales" table="computacional">
+    <id column="computacionalesID" name="id">
+      <generator class="increment"/>
+    </id>
+    <property length="10" name="codigo" unique="true"/>
+    <property length="20" name="material"/>
+    <property length="20" name="productor"/>
+    <property length="20" name="costo"/>
+    <property length="20" name="fecha"/>
+    <property length="20" name="marca"/>
+    <property length="50" name="anio"/>
+  </class>
+</hibernate-mapping>

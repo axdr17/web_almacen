@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <!-- JDBC Hibernate Properties -->
+    <property name="connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+    <property name="c3p0.timeout">60</property>
+    <property name="c3p0.max_statements">50</property>
+    <!-- Hibernate Configuration Properties -->
+    <property name="dialect">org.hibernate.dialect.DerbyDialect</property>
+    <property name="show_sql">false</property>
+    <property name="order_updates">true</property>
+    <property name="generate_statistics">true</property>
+    <!-- Miscellaneous Properties -->
+    <property name="hbm2ddl.auto">update</property>
+    <!-- Hibernate Transaction Properties -->
+    <property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+    <!-- Persistent Entities -->
+    <mapping resource="da/computacionales/computacionales.hbm.xml"/>
+    <mapping resource="da/oficina/oficina.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
